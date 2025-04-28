@@ -1,0 +1,119 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  background: linear-gradient(
+    to top,
+    #87ceeb 0%,
+    /* Troposphere */ #4682b4 20%,
+    /* Stratosphere */ #1e3f66 45%,
+    /* Mesosphere */ #0b0b45 70%,
+    /* Thermosphere */ #000000 100% /* Exosphere */
+  );
+}
+
+.container .box {
+  height: 100vh;
+}
+
+.container .box h1 {
+  color: white;
+}
+
+.container .box1 {
+  background-image: url("./images/Exosphere.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .box2 {
+  background-image: url("./images/Thermosphere.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .box3 {
+  background-image: url("./images/Mesosphere.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .box4 {
+  background-image: url("./images/Stratosphere.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .box5 {
+  background-image: url("./images/Troposphere.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .box6 {
+  background-image: url("./images/earth.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container .box {
+  position: relative;
+  z-index: 0;
+}
+
+.container .box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5));
+}
+
+#moveButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+// ROCKET CODE START
+.box5{
+    position: relative;
+}
+
+.box6 img {
+    position: absolute;
+    left: 50%;
+    bottom: 262px; /* <-- you missed 'px' */
+    transform: translate(-50%, 0);
+    transition: none; /* We'll control movement manually */
+}
+
+
+button{
+    position: absolute;
+    top: 0px;
+}
+
+//ROCKET CODE END
