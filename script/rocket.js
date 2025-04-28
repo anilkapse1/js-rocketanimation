@@ -43,3 +43,8 @@ function handleRocketClick() {
 
 // Add event listener to button to trigger the rocket movement
 moveButton.addEventListener("click", handleRocketClick);
+
+window.onload = function() {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+  
